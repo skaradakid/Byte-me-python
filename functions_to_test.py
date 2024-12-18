@@ -1,16 +1,22 @@
 # Placeholder functions for Python basics, to be implemented later
 
 def add_numbers(a, b):
-    pass
+    return a + b
 
 def find_maximum(a, b, c):
-    pass
+    lst = list(a,b,c)
+    return(max(lst))
 
 def is_palindrome(string):
-    pass
+    if string[::-1] == string:    
+        return True
 
 def count_word_occurrences(text, word):
-    pass
+    count = 0
+    for x in text:
+        if word in x:
+            count += 1
+    return count
 
 def read_file_lines(filepath):
     pass

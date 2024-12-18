@@ -35,3 +35,5 @@ def signup(username, password, email):
     Returns:
     - bool: `True` if the signup is successful, otherwise raises a `ValueError` for invalid input.
     """
+    if len(username) == 0 or len(username) == 0 or len(username) == 0:
+        raise ValueError
