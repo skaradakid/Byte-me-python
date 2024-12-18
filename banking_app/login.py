@@ -1,4 +1,5 @@
 # login.py - Placeholder for login functionality
+from string import punctuation
 
 def login(username, password):
     """
@@ -33,3 +34,11 @@ def login(username, password):
     - bool: `True` if login is successful, `False` if login fails, or raises a `ValueError` for invalid input.
 
     """
+    if len(username) or password == 0:
+        raise ValueError
+
+    for x, y in username, password:
+        if x in punctuation or y in punctuation:
+            raise ValueError
+
+    
