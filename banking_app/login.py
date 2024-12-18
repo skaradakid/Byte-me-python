@@ -41,4 +41,9 @@ def login(username, password):
         if x in punctuation or y in punctuation:
             raise ValueError
 
-    
+    with open("database.csv", 'r') as db:
+        db = db.read()
+    if username not in db or password not in db:
+        raise ValueError
+    else:
+        return password
